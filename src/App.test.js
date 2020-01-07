@@ -45,4 +45,17 @@ describe('App Component', () => {
         const result = mockImp(1)
         expect(result).toBe(43);
     });
+
+    it('Should count is 0 as default', () => {
+        let wrapper = findByClassName(component, 'countText');
+        expect(wrapper.text()).toEqual('0');
+    });
+
+    test('Should change count button works as expected', () => {
+        const instance = component.instance();
+        const button = findByClassName(component, 'changeButton');
+        button.simulate('click');
+        const newState = instance.state.count;
+        expect(newState).toBe(1);
+    })
 })

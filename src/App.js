@@ -23,10 +23,13 @@ class App extends Component {
   }
 
   render(){
+    const {count} = this.state;
     return (
     <div className="appComponent">
         <Header />
         <Footer header="Posts" desc="Click the button to render props" />
+        <button className="changeButton" onClick={() => this.changeCountValue()}>Change Count</button>
+        <p className="countText">{count}</p>
     </div>
     )
   }
