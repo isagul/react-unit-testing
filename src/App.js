@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import Header from './component/header/index';
-import Footer from './component/footer/index';
+import Posts from './component/posts/index';
+import './App.scss';
 
 class App extends Component {
 
@@ -19,7 +20,7 @@ class App extends Component {
   changeCountValue(){
     this.setState({
       count: 1
-    })
+    });
   }
 
   render(){
@@ -27,9 +28,11 @@ class App extends Component {
     return (
     <div className="appComponent">
         <Header />
-        <Footer header="Posts" desc="Click the button to render props" />
-        <button className="changeButton" onClick={() => this.changeCountValue()}>Change Count</button>
-        <p className="countText">{count}</p>
+        <section>
+          <button className="changeButton" onClick={() => this.changeCountValue()}>Change Count</button>
+          <p className="countText">{count}</p>
+        </section>        
+        <Posts header="Posts" desc="Click the button to render posts" />
     </div>
     )
   }

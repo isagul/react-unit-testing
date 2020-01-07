@@ -1,0 +1,7 @@
+.appComponent {
+    > * {
+        border-bottom: 1px solid lightgray;
+        margin: 1rem 0;
+        padding-bottom: 1rem;
+    }
+}
