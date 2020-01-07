@@ -18,7 +18,7 @@ const Footer = (props) => {
     function decreaseCount(){
         setCount(prevCount => prevCount - 1)
     }
-    
+
     return (
         <div className="footerComponent">
             <h1 className="header">{header}</h1>
